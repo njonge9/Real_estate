@@ -11,32 +11,32 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="mt-2">
     <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
-  <div>
+  <div class="mt-2">
     <%= form.label :address, style: "display: block" %>
-    <%= form.text_field :address %>
+    <%= form.text_field :address, class: "form-control"  %>
   </div>
 
-  <div>
+  <div class="mt-2">
     <%= form.label :price, style: "display: block" %>
-    <%= form.number_field :price %>
+    <%= form.number_field :price, class: "form-control"  %>
   </div>
 
-  <div>
+  <div class="mt-2">
     <%= form.label :rooms, style: "display: block" %>
-    <%= form.number_field :rooms %>
+    <%= form.number_field :rooms, class: "form-control"  %>
   </div>
 
-  <div>
+  <div class="mt-2">
     <%= form.label :bathrooms, style: "display: block" %>
-    <%= form.number_field :bathrooms %>
+    <%= form.number_field :bathrooms, class: "form-control"  %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="mt-2">
+    <%= form.submit "Submit" , class: "btn btn-lg btn-secondary"  %>
   </div>
 <% end %>

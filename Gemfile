@@ -75,3 +75,7 @@ group :test do
 end
 
 gem "devise", "~> 4.9"
+
+# image uploads to amazon s3
+gem 'carrierwave', '~> 3.0'
+gem 'fog-aws', '~> 3.19'

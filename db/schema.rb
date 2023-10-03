@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema[7.0].define(version: 2023_10_02_080706) do
   create_table "properties", force: :cascade do |t|
-    t.integer "User_id"
+    t.integer "user_id"
     t.string "name"
     t.string "address"
     t.integer "price"
@@ -21,7 +21,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_02_080706) do
     t.string "photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["User_id"], name: "index_properties_on_User_id"
+    t.index ["user_id"], name: "index_properties_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
