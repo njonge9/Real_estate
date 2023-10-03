@@ -25,7 +25,7 @@
   </p>
 
   <p>
-    <%= link_to image_tag(property.photo), property.photo %>
+      <%= link_to image_tag(property.image_as_thumbnail), property.photo if property.photo.attached? %>
   </p>
 
 </div>

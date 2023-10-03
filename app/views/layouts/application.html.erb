@@ -11,7 +11,7 @@
   </head>
 
   <body>
-      <% if ["homepage", "devise", "sessions"].include?(controller.controller_name)%>
+      <% if ["homepage", "devise", "sessions","registrations" ].include?(controller.controller_name)%>
       <header>
         <%= render "layouts/nav/public"%>
       </header>
