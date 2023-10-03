@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   root 'homepage#main'
   resources :properties
   devise_for :users
+
+  # scope :latest, -> {order created_at: :desc}
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

@@ -4,6 +4,6 @@ class Property < ApplicationRecord
 
   def image_as_thumbnail
     return unless photo.content_type.in?(%w[image/jpeg image/png image/jpg])
-    photo.variant(resize_to_limit: [400, 400]).processed
+    photo.variant(resize_to_fill: [400, 267]).processed
   end
 end

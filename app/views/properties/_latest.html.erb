@@ -1,0 +1,7 @@
+<% @properties.each do |property|%>
+        <div class="col-md-4">
+            <%= property_thumbnail property%>
+            <h3><%= property.name %></h3>
+            <p><%= property.rooms%></p>
+        </div>
+<% end %>
