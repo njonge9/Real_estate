@@ -36,6 +36,11 @@
     <%= form.number_field :bathrooms, class: "form-control"  %>
   </div>
 
+   <div class="mt-2">
+    <%= form.label :photo, style: "display: block" %>
+    <%= form.file_field :photo, class: "form-control"  %>
+  </div>
+
   <div class="mt-2">
     <%= form.submit "Submit" , class: "btn btn-lg btn-secondary"  %>
   </div>
