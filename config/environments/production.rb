@@ -98,8 +98,8 @@ Rails.application.configure do
     address: 'smtp.gmail.com',
     port: 587,
     domain: 'onrender.com',
-    user_name: 'frednjonge9@gmail.com',
-    password: 'nggc xjbx cvhx thvu',
+    user_name: Rails.application.credentials.dig(:google_smtp, :email),
+    password: Rails.application.credentials.dig(:google_smtp, :password),
     authentication: 'plain',
     enable_starttls_auto: true
 }
