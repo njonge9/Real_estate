@@ -11,7 +11,7 @@
   </head>
 
   <body>
-      <% if ["homepage", "devise", "sessions","registrations" ].include?(controller.controller_name)%>
+      <% if ["homepage", "devise", "sessions","registrations", "confirmations" ].include?(controller.controller_name)%>
       <header>
         <%= render "layouts/nav/public"%>
       </header>
@@ -23,7 +23,7 @@
           <div class="row">
             <%= render "layouts/nav/sidebar" %>
           </div>
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <main class="col-sm-9 ms-sm-auto col-lg-10 px-md-4">
                 <%= render "layouts/alerts"%>
                 <%= yield %>
             </main>
