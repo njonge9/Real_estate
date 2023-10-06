@@ -10,8 +10,8 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
-      <% if ["homepage", "devise", "sessions","registrations", "confirmations" ].include?(controller.controller_name)%>
+  <body class="<%= controller.action_name%> <%= "show_sidebar" if @show_sidebar.present?%>" id="<%= controller.controller_name%>">
+      <% if @show_sidebar.nil?%>
       <header>
         <%= render "layouts/nav/public"%>
       </header>

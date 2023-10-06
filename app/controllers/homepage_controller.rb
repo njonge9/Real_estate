@@ -1,5 +1,5 @@
 class HomepageController < ApplicationController
   def main
-    @properties = Property.all
+    @properties = Property.latest
   end
 end

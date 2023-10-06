@@ -6,4 +6,5 @@ class Property < ApplicationRecord
     return unless photo.content_type.in?(%w[image/jpeg image/png image/jpg])
     photo.variant(resize_to_fill: [400, 267]).processed
   end
+  scope  :latest, -> { order(created_at: :asc) }
 end
