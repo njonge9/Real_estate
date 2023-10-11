@@ -1,31 +1,38 @@
-<div id="<%= dom_id property %>">
-  <p>
-    <strong>Name:</strong>
-    <%= property.name %>
-  </p>
+<div class="property_photo" style="background-size: cover;height:600px; background-image: url(<%= rails_blob_url(property_photo_url(@property))%>)"%>
+  <div class="photo-overlay"></div>
+</div>
 
-  <p>
-    <strong>Address:</strong>
-    <%= property.address %>
-  </p>
+<div id="<%= dom_id property %>" class="container mt-5">
+  <div class="row">
+    <div class="col-8">
+      <p>
+        <strong>Name:</strong>
+        <%= property.name %>
+      </p>
 
-  <p>
-    <strong>Price:</strong>
-    <%= property.price %>
-  </p>
+      <p>
+        <strong>Address:</strong>
+        <%= property.address %>
+      </p>
 
-  <p>
-    <strong>Rooms:</strong>
-    <%= property.rooms %>
-  </p>
+      <p>
+        <strong>Price:</strong>
+        <%= property.price %>
+      </p>
 
-  <p>
-    <strong>Bathrooms:</strong>
-    <%= property.bathrooms %>
-  </p>
+      <p>
+        <strong>Rooms:</strong>
+        <%= property.rooms %>
+      </p>
 
-  <p>
-      <%= link_to image_tag(property.image_as_thumbnail), property.photo if property.photo.attached? %>
-  </p>
+      <p>
+        <strong>Bathrooms:</strong>
+        <%= property.bathrooms %>
+      </p>
+    </div>
+    <div class="col-4">
+      <%= render "properties/agent_details"%>
+    </div>
+  </div>
 
 </div>
