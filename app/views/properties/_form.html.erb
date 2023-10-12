@@ -42,6 +42,11 @@
   </div>
 
    <div class="mt-2">
+    <%= form.label :details, style: "display: block" %>
+    <%= form.text_field :details, class: "form-control"  %>
+  </div>
+
+   <div class="mt-2">
     <%= form.label :photo, style: "display: block" %>
     <%= form.file_field :photo, class: "form-control"  %>
      <% if @property.photo.present? %>
